@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.javafxbuch.FormController">
+    <children>
+        <Button fx:id="saveButton" layoutX="257.0" layoutY="245.0" onAction="#handleButtonAction" text="submit" />
+        <Label fx:id="label" layoutX="14.0" layoutY="6.0" minHeight="16" minWidth="69" text="Register for Training" /><Label layoutX="33.353271484375" layoutY="54.0" text="First Name:" /><Label layoutX="34.0" layoutY="87.0" text="Last Name:" /><TextField fx:id="firstName" layoutX="120.46875" layoutY="49.0" /><TextField fx:id="lastName" layoutX="120.0" layoutY="82.0" /><CheckBox fx:id="javaFx" layoutX="36.318603515625" layoutY="128.25" mnemonicParsing="false" text="JavaFX" /><CheckBox fx:id="performanceTuning" layoutX="36.0" layoutY="160.0" mnemonicParsing="false" text="PerformanceTuning" /><CheckBox fx:id="javaSpecialistMaster" layoutX="36.0" layoutY="192.0" mnemonicParsing="false" text="JavaSpecialist Master Course" />
+    </children>
+</AnchorPane>
