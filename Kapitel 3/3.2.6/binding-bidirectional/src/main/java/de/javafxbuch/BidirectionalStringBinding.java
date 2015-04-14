@@ -22,23 +22,22 @@ import javafx.util.converter.NumberStringConverter;
  *
  * @author antonepple
  */
-public class MainApp extends Application {
+public class BidirectionalStringBinding extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
         
-        DoubleProperty number1 = new SimpleDoubleProperty(1);
-        DoubleProperty number2 = new SimpleDoubleProperty(2);
-        number2.bindBidirectional(number1);
-        number2.setValue(3);
-        number1.setValue(4);
-        System.out.println("number2 hat den Wert " + number2.getValue());
-        // unbind hebt das Binding wieder auf
-        number2.unbindBidirectional(number1);
-        number1.setValue(10);
-        System.out.println("number2 hat den Wert " + number2.getValue());
-        
-      
+    
+        TextField textField = new TextField();
+        Slider slider = new Slider();
+        StringProperty sp = textField.textProperty();
+        DoubleProperty dp = slider.valueProperty();
+        StringConverter<Number> converter = new NumberStringConverter();
+        Bindings.bindBidirectional(sp, dp, converter);
+        VBox root = new VBox(slider, textField);
+        Scene scene = new Scene(root, 400,400);
+        stage.setScene(scene);
+        stage.show();
     }
 
     /**
