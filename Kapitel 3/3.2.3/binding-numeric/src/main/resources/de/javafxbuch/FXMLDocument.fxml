@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="440.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.javafxbuch.FormController">
+    <children><AnchorPane id="AnchorPane" prefHeight="532.0" prefWidth="345.0">
+<children>
+<Label layoutX="14.0" layoutY="6.0" minHeight="16" minWidth="69" text="Numeric Bindings" />
+<Label layoutX="33.353271484375" layoutY="54.0" text="Wert 1:" />
+<Label layoutX="34.0" layoutY="87.0" text="Wert 2:" />
+<Slider fx:id="slider1" layoutX="89.0" layoutY="54.40000009536743" showTickMarks="true" />
+<Slider fx:id="slider2" layoutX="89.0" layoutY="87.40000009536743" showTickMarks="true" />
+<Label fx:id="label1" layoutX="246.0" layoutY="54.0" text="Label" />
+<Label fx:id="label2" layoutX="246.0" layoutY="87.0" text="Label" /><Label layoutX="49.0" layoutY="135.0" text="add:" /><Label fx:id="add" layoutX="257.0" layoutY="135.0" text="Val" /><Label fx:id="subtract" layoutX="257.0" layoutY="159.0" text="Val" /><Label layoutX="46.0" layoutY="159.0" text="subtract:" /><Label layoutX="49.0" layoutY="212.0" text="divide:" /><Label fx:id="divide" layoutX="257.0" layoutY="212.0" text="Val" /><Label layoutX="45.0" layoutY="186.0" text="multiply:" /><Label fx:id="multiply" layoutX="257.0" layoutY="186.0" text="Val" /><Label fx:id="negate" layoutX="256.0" layoutY="238.0" text="Val" /><Label layoutX="48.0" layoutY="238.0" text="negate (Wert1)" /><Label layoutX="48.0" layoutY="264.0" text="max" /><Label fx:id="max" layoutX="256.0" layoutY="263.0" text="Val" /><Label fx:id="min" layoutX="256.0" layoutY="289.0" text="Val" /><Label layoutX="48.0" layoutY="290.0" text="min" /><Label layoutX="48.0" layoutY="310.0" text="greaterThan" /><Label fx:id="greaterThan" layoutX="256.0" layoutY="309.0" text="Val" /><Label fx:id="greaterThanOrEqualTo" layoutX="256.0" layoutY="334.0" text="Val" /><Label layoutX="48.0" layoutY="333.0" text="greaterThanOrEqualTo" /><Label fx:id="isEqualTo" layoutX="256.0" layoutY="358.0" text="Val" /><Label layoutX="48.0" layoutY="359.0" text="isEqualTo" /><Label layoutX="48.0" layoutY="385.0" text="isNotEqualTo" /><Label fx:id="isNotEqualTo" layoutX="256.0" layoutY="385.0" text="Val" /><Label fx:id="lessThanOrEqualTo" layoutX="256.0" layoutY="440.0" text="Val" /><Label layoutX="48.0" layoutY="442.0" text="lessThanOrEqualTo" /><Label layoutX="48.0" layoutY="416.0" text="lessThan" /><Label fx:id="lessThan" layoutX="256.0" layoutY="416.0" text="Val" />
+</children>
+</AnchorPane>
+    </children>
+</AnchorPane>
