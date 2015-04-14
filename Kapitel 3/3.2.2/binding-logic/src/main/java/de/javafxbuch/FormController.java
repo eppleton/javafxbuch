@@ -51,12 +51,7 @@ public class FormController implements Initializable {
                         .or(javaSpecialistMaster.selectedProperty()));
 
         saveButton.disableProperty().bind(courseSelected.and(nameEntered).not());
-
-//        StringBinding suggestJavaFXIfNotChosen = new When( javaFx.selectedProperty() )
-//                .then(javaFx.textProperty())
-//                .otherwise("Warum nicht JavaFX?");
-//        TextField textField = new TextField();
-//       
+  
     }
 
 }
