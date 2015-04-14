@@ -1,8 +1,5 @@
 package de.javafxbuch;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
@@ -12,12 +9,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 public class MainApp extends Application {
 
-    private static final Logger log = LoggerFactory.getLogger(MainApp.class);
 
     public static void main(String[] args) throws Exception {
         launch(args);
