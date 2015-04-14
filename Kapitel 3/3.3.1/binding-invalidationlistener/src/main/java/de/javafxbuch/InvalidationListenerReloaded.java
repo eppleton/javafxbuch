@@ -1,6 +1,7 @@
 package de.javafxbuch;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.Observable;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.NumberBinding;
@@ -27,6 +28,7 @@ public class InvalidationListenerReloaded extends Application {
         number1.setValue(90);
         // durch das  "calculated.getValue()" im Listener wird das Binding wieder scharf geschaltet.
         number1.setValue(10);
+        Platform.exit();
 
     }
 

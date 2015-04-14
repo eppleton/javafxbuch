@@ -6,17 +6,10 @@
 package de.javafxbuch;
 
 import javafx.application.Application;
-import javafx.beans.binding.Bindings;
+import javafx.application.Platform;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.StringProperty;
-import javafx.scene.Scene;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.util.StringConverter;
-import javafx.util.converter.NumberStringConverter;
 
 /**
  *
@@ -37,7 +30,7 @@ public class MainApp extends Application {
         number2.unbindBidirectional(number1);
         number1.setValue(10);
         System.out.println("number2 hat den Wert " + number2.getValue());
-        
+        Platform.exit();
       
     }
 

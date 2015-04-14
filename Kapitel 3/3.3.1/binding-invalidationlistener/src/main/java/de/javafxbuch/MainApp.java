@@ -1,6 +1,7 @@
 package de.javafxbuch;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.Observable;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.NumberBinding;
@@ -27,7 +28,7 @@ public class MainApp extends Application {
         number1.setValue(90);
     // die nächste Änderung bekommt ein InvalidationListener nicht mehr mit: 
         number1.setValue(10);
-        
+        Platform.exit();
     }
 
 }

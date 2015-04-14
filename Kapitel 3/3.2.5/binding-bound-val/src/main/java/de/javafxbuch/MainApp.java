@@ -6,6 +6,7 @@
 package de.javafxbuch;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.stage.Stage;
@@ -27,6 +28,7 @@ public class MainApp extends Application {
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
+        Platform.exit();
     }
 
     /**

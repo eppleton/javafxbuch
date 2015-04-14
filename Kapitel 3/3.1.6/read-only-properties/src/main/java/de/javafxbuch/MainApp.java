@@ -1,6 +1,7 @@
 package de.javafxbuch;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.property.StringProperty;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -30,6 +31,7 @@ public class MainApp extends Application {
             System.err.println("Das ist verboten!");
         }
         System.out.println("Paula heisst immer noch "+paula.getName());
+        Platform.exit();
     }
 
 }
