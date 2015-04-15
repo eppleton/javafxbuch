@@ -1,10 +1,9 @@
 package de.javafxbuch;
 
 import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
 import javafx.scene.layout.StackPane;
+import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
@@ -15,15 +14,14 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        final TextArea textArea = new TextArea();
-        textArea.setPrefRowCount(10);
-        textArea.setPrefColumnCount(20);
-        textArea.setWrapText(true);
-        StackPane root = new StackPane(new Group(textArea));
+        HTMLEditor htmlEditor = new HTMLEditor();
+        StackPane root = new StackPane();
+        root.getChildren().add(htmlEditor);
         Scene scene = new Scene(root, 300, 250);
-        primaryStage.setTitle("TextArea Demo");
+        primaryStage.setTitle("HTMLEditor Demo");
         primaryStage.setScene(scene);
         primaryStage.show();
+
     }
 
 }
