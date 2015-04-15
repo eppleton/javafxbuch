@@ -24,6 +24,11 @@ public class MainApp extends Application {
         toggleButton.setToggleGroup(toggleGroup);
         toggleButton2.setToggleGroup(toggleGroup);
         toggleButton3.setToggleGroup(toggleGroup);
+
+        toggleGroup.selectedToggleProperty().addListener((obs, o, n) -> {
+            System.out.println("Ausgewählt: " + toggleGroup.getSelectedToggle());
+        });
+
         VBox vBox = new VBox(toggleButton, toggleButton2, toggleButton3);
         vBox.setPadding(new Insets(20));
         Scene scene = new Scene(vBox);

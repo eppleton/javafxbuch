@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.javafxbuch</groupId>
-    <artifactId>binding-valueAt</artifactId>
-    <name>binding-valueAt</name>
+    <artifactId>binding-observablelistbase</artifactId>
+    <name>binding-observablelistbase</name>
 
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
