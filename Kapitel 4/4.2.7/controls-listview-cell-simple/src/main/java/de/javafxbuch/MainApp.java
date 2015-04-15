@@ -117,6 +117,13 @@ public class MainApp extends Application {
             super.cancelEdit();
             setGraphic(null);
         }
+
+        @Override
+        public void commitEdit(Double newValue) {
+            super.commitEdit(newValue);
+            setGraphic(null);
+        }
+
     }
 
 }
