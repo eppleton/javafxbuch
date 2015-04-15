@@ -36,6 +36,7 @@ public class MainApp extends Application {
         slider.setShowTickLabels(true);
         slider.setMajorTickUnit(.1);
         slider.setMinorTickCount(4);
+        slider.setSnapToTicks(true);
         slider.setLabelFormatter(new StringConverter<Double>() {
             @Override
             public String toString(Double value) {
