@@ -26,6 +26,10 @@ public class MainApp extends Application {
                 int iterationen;
                 for (iterationen = 0; iterationen < 100000; iterationen++) {
                     Thread.sleep(100);
+                    if (isCancelled()) {
+                        updateMessage("Task abgebrochen");
+                        break;
+                    }
                     updateProgress(iterationen, 100000);
                 }
                 return iterationen;
@@ -37,11 +41,18 @@ public class MainApp extends Application {
                 btn.textProperty().bind(
                         Bindings.concat("Progress ",
                                 task.progressProperty().multiply(100), "%"));
-                Thread thread = new Thread(task);
-                thread.start();
+                if (task.isRunning()) {
+                    task.cancel();
+                    btn.textProperty().unbind();
+                    btn.setText("cancelled");
+                    btn.setDisable(true);
+                } else {
+                    Thread thread = new Thread(task);
+                    thread.start();
+                }
             }
         });
-        primaryStage.setScene(new Scene(new StackPane(btn),140,40));
+        primaryStage.setScene(new Scene(new StackPane(btn), 140, 40));
         primaryStage.show();
     }
 
