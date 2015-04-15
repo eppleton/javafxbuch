@@ -21,8 +21,6 @@ public class MainApp extends Application {
         StackPane pane = new StackPane(cb);
         Scene scene = new Scene(pane, 300, 250);
 
-        primaryStage.setTitle(
-                "TableView Demo");
         primaryStage.setScene(scene);
 
         primaryStage.show();
