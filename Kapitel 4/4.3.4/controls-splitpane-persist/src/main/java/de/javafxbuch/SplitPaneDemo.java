@@ -2,6 +2,7 @@ package de.javafxbuch;
 
 import java.util.prefs.Preferences;
 import javafx.application.Application;
+import javafx.geometry.Orientation;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
@@ -20,16 +21,25 @@ public class SplitPaneDemo extends Application {
     public void start(Stage primaryStage) {
         Preferences prefs = Preferences.userNodeForPackage(SplitPaneDemo.class);
         splitPane = new SplitPane();
-        for (int i = 0; i < 5; i++) {
-            splitPane.getItems().add(
-                    new StackPane(new Label("Fenster " + i)));
-        }
+
         if (prefs.getDouble("divider0", -1) != -1) {
             for (int i = 0; i < splitPane.getDividerPositions().length; i++) {
                 splitPane.setDividerPosition(i,
                         prefs.getDouble("divider" + i, 0));
             }
         }
+        for (int i = 0; i < 5; i++) {
+            StackPane stackPane = new StackPane(new Label("Fenster " + i));
+            stackPane.setMinWidth(40);
+            stackPane.setMaxWidth(120);
+            splitPane.getItems().add(stackPane);
+        }
+//        SplitPane vSplitPane = new SplitPane();
+//        vSplitPane.setOrientation(Orientation.VERTICAL);
+//        for (int i = 6; i < 8; i++) {
+//            vSplitPane.getItems().add(new StackPane(new Label("Fenster " + i)));
+//        }
+//        splitPane.getItems().add(vSplitPane);
         scene = new Scene(splitPane, prefs.getDouble("width", 300), prefs.getDouble("height", 250));
         primaryStage.setX(prefs.getDouble("x", 100));
         primaryStage.setY(prefs.getDouble("y", 100));
