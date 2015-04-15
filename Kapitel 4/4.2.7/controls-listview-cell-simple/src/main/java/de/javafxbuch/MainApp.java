@@ -3,15 +3,14 @@ package de.javafxbuch;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Orientation;
 import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.TextFieldListCell;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import javafx.util.StringConverter;
 
 public class MainApp extends Application {
 
@@ -31,6 +30,9 @@ public class MainApp extends Application {
             }
         });
         listView.setEditable(true);
+        listView.setOrientation(Orientation.HORIZONTAL);
+        listView.setFixedCellSize(100);
+        listView.setPrefHeight(100);
         StackPane root = new StackPane(listView);
         Scene scene = new Scene(root);
         primaryStage.setTitle("ListView Demo");
