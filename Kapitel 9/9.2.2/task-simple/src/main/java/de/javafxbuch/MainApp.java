@@ -41,7 +41,7 @@ public class MainApp extends Application {
                 thread.start();
             }
         });
-        primaryStage.setScene(new Scene(new StackPane(btn)));
+        primaryStage.setScene(new Scene(new StackPane(btn),140,40));
         primaryStage.show();
     }
 
