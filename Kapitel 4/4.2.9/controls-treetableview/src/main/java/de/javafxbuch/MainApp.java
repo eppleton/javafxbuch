@@ -47,26 +47,4 @@ public class MainApp extends Application {
         primaryStage.show();
     }
 
-    private static class GoalsCell extends TableCell<Player, Integer> {
-
-        private final HBox goalsBox;
-        private final Image goalImage;
-
-        public GoalsCell() {
-            goalsBox = new HBox();
-            goalImage = new Image(GoalsCell.class.getResource("world.png").toString());
-        }
-
-        @Override
-        protected void updateItem(Integer item, boolean empty) {
-            setText("");
-            goalsBox.getChildren().clear();
-            if (item != null) {
-                for (int i = 0; i < item; i++) {
-                    goalsBox.getChildren().add(new ImageView(goalImage));
-                }
-            }
-            setGraphic(goalsBox);
-        }
-    }
 }
