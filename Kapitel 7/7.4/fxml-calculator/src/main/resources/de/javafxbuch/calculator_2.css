@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Digital;
+    src: url('DS-DIGI.TTF');
+}
+
+.label{
+    -fx-background-color: rgb(156, 185, 131);       
+    -fx-alignment: CENTER_RIGHT;
+    -fx-padding: 12 14 20 10;
+    -fx-background-radius: 4;
+    -fx-background-insets: 10 10 20 10;
+    -fx-effect: innershadow(two-pass-box,rgb(26, 30, 15) , 10, 0, 3, 3 )
+}
+
+.label .text{
+    -fx-effect: dropshadow(two-pass-box , black, 4, 0.0 , 1, 1);  
+    -fx-font-family: DS-Digital;
+    -fx-font-size: 60;
+    -fx-fill: rgb(26, 30, 15);
+}
+
+GridPane{
+    -fx-background-color: rgb(193, 197, 201);
+    -fx-padding: 40 20 20 20;
+    -fx-effect: innershadow(two-pass-box,black , 10, 0, 0, 0 )
+}
+
+.button{
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets:  10,10 10 12 10, 10 10 13 10, 10 10 14 10;
+    -fx-background-radius: 10;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.6em;   
+}
+
+.button#clear{   
+    -fx-text-fill: rgb(61,25,0);
+    -fx-background-color:   
+        linear-gradient(from 0% 93% to 0% 100%, rgb(142, 88, 18), rgb(102,65,36) 100%),
+        rgb(142, 88, 18),
+        rgb(170, 124, 24),
+        radial-gradient(center 50% 50%, radius 100%,rgb(216, 155, 14) 50%, rgb(156, 118, 14));
+    -fx-effect: dropshadow( gaussian , rgba(178,179,134,0.75) , 10, .1 , 0, 3 );
+}
+
+
+.button:armed{
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 12 10 10 10,12 10 11 10, 12 10 12 10, 12 10 13 10;
+}
+
+
+
+.button.number{
+    -fx-text-fill: rgb(237,239,252);
+    -fx-background-color:    
+        linear-gradient(from 0% 93% to 0% 100%, rgb(73,70,81), rgb(36,35,38) 100%),
+        rgb(36,35,38),
+        rgb(92,91,104),
+        radial-gradient(center 50% 50%, radius 100%,rgb(92,91,104) 50%, rgb(87,86,95));
+    -fx-effect: dropshadow( gaussian , rgba(149,147,139,0.75) , 10, .1 , 0, 3 );
+}
+
+.button.function{
+    -fx-text-fill: rgb(237,239,252);
+    -fx-background-color:    
+        linear-gradient(from 0% 93% to 0% 100%, rgb(60,55,112), rgb(61,69,95) 100%),
+        rgb(71,69,95),
+        rgb(81,89,152),
+        radial-gradient(center 50% 50%, radius 100%,rgb(81,89,152) 50%, rgb(73,81,162));
+    -fx-effect: dropshadow( gaussian , rgba(141,137,137,0.75) , 10, .1 , 0, 3 );
+}
+
+
+
+
