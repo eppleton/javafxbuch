@@ -2,9 +2,13 @@ package de.javafxbuch;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TreeCell;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
