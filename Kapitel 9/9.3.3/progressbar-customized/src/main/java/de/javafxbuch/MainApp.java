@@ -49,10 +49,8 @@ public class MainApp extends Application {
         VBox root = new VBox(btn, progressBar);
 
         Scene scene = new Scene(root, 300, 250);
-//        scene.getStylesheets().add("progressbar/css/progressbar.css");
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
-//        ScenicView.show(scene);
         primaryStage.show();
     }
 
