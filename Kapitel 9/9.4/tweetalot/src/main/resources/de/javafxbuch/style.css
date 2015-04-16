@@ -1,0 +1,25 @@
+.root{
+    -fx-view-button-base: rgb(70,154, 232);
+    -fx-view-button-base-inactive: rgb(97,111,121);
+}
+
+.tool-bar{
+    -fx-background-color: black;
+}
+
+.button.view-button{
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-view-button-base-inactive;
+}
+
+.button.view-button:hover{
+    -fx-text-fill: -fx-view-button-base;
+}
+
+.button.view-button:armed{
+    -fx-text-fill: derive(-fx-view-button-base, -20%);
+}
+
+.label.screen-name{
+    -fx-font-weight: bold;
+}
