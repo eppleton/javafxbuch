@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="de.javafxbuch.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="112.0" layoutY="87.0" onAction="#handleButtonAction" text="%hello_world_button_text" />
+    </children>
+</AnchorPane>
