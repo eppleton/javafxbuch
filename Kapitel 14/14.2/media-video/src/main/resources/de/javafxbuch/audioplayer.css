@@ -1,0 +1,46 @@
+.root{
+    -fx-shape: "M 20 0 L 100 00 A 20 20 0 0 1 120 20 L 120 
+        100 A 20 20 0 0 1 100 120 L 20 120 A 20 20 0 0 1 0 
+        100 L 0 20  A 20 20 0 0 1 20 0 z";
+}
+
+.background-region{
+    -fx-padding: 10;
+    -fx-background-color: #333333;
+    -fx-opacity: 0
+}
+
+.player-button {
+    -fx-background-color: #aaaaaa;
+    -fx-background-insets: 3
+}
+
+.player-button:hover {
+    -fx-background-color: #ffffff;
+}
+
+.player-button.fastfw{
+    -fx-shape: "M 0 0 L 10 5 L 0 10 z M 5 0 L 15 5 L 5 10 z"; 
+}
+
+.player-button.fastbw{
+   -fx-shape: "M 0 0 L 10 5 L 0 10 z M 5 0 L 15 5 L 5 10 z"; 
+   -fx-rotate: 180;
+}
+
+.player-button.play{
+    -fx-shape: "M 0 0 L 10 5 L 0 10 z"; 
+}
+
+.player-button.pause{
+    -fx-shape: "M 0 0 L 10 0 L 10 30 L 0 30 z M 40 0 L 50 0 L 50 30 L 40 30 z"; 
+}
+
+.player-button#stop{
+    -fx-shape: "M 0 0 L 0 10 L 10 10 L 10 0 z"; 
+}
+
+.player-button#quit{
+    -fx-shape: "M 0 4 L 4 0 L 20 16 L 16 20 z M 0 16 L 4 20 L 20 4 L 16 0  z"; 
+}
+
