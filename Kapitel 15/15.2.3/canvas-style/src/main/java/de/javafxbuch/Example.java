@@ -16,7 +16,7 @@ public class Example extends Application {
     @Override
     public void start(Stage stage) {
         final Canvas canvas = new Canvas(1280, 720);
-        final GraphicsContext# gc = canvas.getGraphicsContext2D();
+        final GraphicsContext gc = canvas.getGraphicsContext2D();
         // Rotes Quadrat 
         gc.setStroke(Color.RED);
         gc.strokeRect(100, 100, 100, 100);
