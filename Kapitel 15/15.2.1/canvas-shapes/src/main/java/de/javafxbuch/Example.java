@@ -35,9 +35,12 @@ public class Example extends Application {
                 new double[]{100, 300, 300, 100},
                 4
         );
-// Gefülltes Rechteck gc.fillRect(100, 400, 100, 200);
-// Gefülltes Rechteck mit runden Ecken gc.fillRoundRect(250, 400, 100, 200, 20, 20);
-// Gefüllte Ellipse gc.fillOval(400, 400, 100, 200);
+// Gefülltes Rechteck 
+        gc.fillRect(100, 400, 100, 200);
+// Gefülltes Rechteck mit runden Ecken 
+        gc.fillRoundRect(250, 400, 100, 200, 20, 20);
+// Gefüllte Ellipse 
+        gc.fillOval(400, 400, 100, 200);
 // Gefüllter Kreisbogen
         gc.fillArc(450, 400, 200, 200, 315, 90, ArcType.ROUND);
         // Gefülltes Polygon
