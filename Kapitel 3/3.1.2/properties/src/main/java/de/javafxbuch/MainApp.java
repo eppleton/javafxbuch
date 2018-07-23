@@ -1,12 +1,8 @@
 package de.javafxbuch;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
