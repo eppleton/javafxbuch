@@ -21,7 +21,7 @@ public class MainApp extends Application {
         MyBean myBean = new MyBean();
         myBean.setSample("Hallo");
 
-        // Ein Listener, der den neuen Wert auf Systme.out ausgibt
+        // Ein Listener, der den neuen Wert auf System.out ausgibt
         myBean.sampleProperty().addListener((obs, o, n) -> System.out.println("neuer Wert: " + n));
         
         // Der Button setzt einen neuen Wert
