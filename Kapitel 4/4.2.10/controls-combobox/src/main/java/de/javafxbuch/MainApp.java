@@ -17,11 +17,13 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         ComboBox<Person> cb = new ComboBox<>();
-        cb.getItems().add(new Person("Manuel", "Neuer", 28));
+        Person neuer = new Person("Manuel", "Neuer", 28);
+        cb.getItems().add(neuer);
         cb.getItems().add(new Person("Philipp", "Lahm", 30));
         cb.getItems().add(new Person("Mats", "Hummels", 25));
         cb.getItems().add(new Person("Jérôme", "Boateng", 25));
         cb.getItems().add(new Person("Benedikt", "Höwedes", 26));
+        cb.setValue(neuer);
         //...
         cb.setConverter(new StringConverter<Person>() {
             @Override
@@ -32,9 +34,7 @@ public class MainApp extends Application {
             @Override
             public Person fromString(String string) {
                 // muss für diesen Anwendungsfall nicht implementiert sein 
-                throw new UnsupportedOperationException("Not"
-                        + "supported yet."
-                );
+				throw new UnsupportedOperationException("Not supported yet.");
             }
         });
 
