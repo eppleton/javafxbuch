@@ -3,9 +3,6 @@ package de.javafxbuch;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.beans.property.StringProperty;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
