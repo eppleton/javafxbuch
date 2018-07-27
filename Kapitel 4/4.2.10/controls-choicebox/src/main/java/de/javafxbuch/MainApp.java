@@ -14,7 +14,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        ChoiceBox cb = new ChoiceBox();
+        ChoiceBox<String> cb = new ChoiceBox<>();
         for (int i = 0; i < 20; i++) {
             cb.getItems().add("Option " + i);
         }
