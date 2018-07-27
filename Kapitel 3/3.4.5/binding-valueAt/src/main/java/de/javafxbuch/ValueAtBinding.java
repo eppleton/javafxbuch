@@ -39,6 +39,21 @@ public class ValueAtBinding extends Application {
         primaryStage.setScene(scene);
         System.out.println("You have been Rick rolled!");
         primaryStage.show();
+
+        Thread t = new Thread(()->{
+        	while(true) {
+        		try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// ignored intentionally
+				}
+        		for(String key: observableMap.keySet()) {
+        			observableMap.put(key, observableMap.get(key)*1.1);
+        		}
+        	}
+        	
+        });
+        t.start();
     }
 
     /**
