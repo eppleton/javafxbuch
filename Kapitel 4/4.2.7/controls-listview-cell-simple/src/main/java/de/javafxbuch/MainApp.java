@@ -49,19 +49,8 @@ public class MainApp extends Application {
             }
         }
 
-        @Override
-        public void replaceSelection(String text) {
-            final int dot = getCaretPosition();
-            final int mark = getAnchor();
-            int start = Math.min(dot, mark);
-            int end = Math.max(dot, mark);
-            if (validate(createPreview(start, end, text))) {
-                super.replaceSelection(text);
-            }
-        }
-
         private boolean validate(String text) {
-            if (text.matches("[-+]?[0-9]*\\.?[0-9]+") || text == "") {
+            if (text.matches("[-+]?[0-9]*\\.?[0-9]*") || text == "") {
                 System.out.println("ok");
                 return true;
             }
@@ -84,18 +73,13 @@ public class MainApp extends Application {
         DoubleTextField dtf = new DoubleTextField();
 
         public DoubleListCell() {
-            dtf.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    commitEdit(Double.parseDouble(dtf.getText()));
-                }
-            });
+            dtf.setOnAction(e -> commitEdit(Double.parseDouble(dtf.getText())));
         }
 
         @Override
         protected void updateItem(Double item, boolean empty) {
             super.updateItem(item, empty);
-            if (item != null & !empty) {
+            if (item != null && !empty) {
                 dtf.setText(item.toString());
                 if (!isEditing()) {
                     setText(item.toString());
