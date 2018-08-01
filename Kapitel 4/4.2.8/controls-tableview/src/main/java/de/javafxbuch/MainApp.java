@@ -45,13 +45,14 @@ public class MainApp extends Application {
                 new PropertyValueFactory<Player, String>("firstName")
         );
         lastName.setCellValueFactory(
-                new PropertyValueFactory<Player, String>("lastName"));
+                new PropertyValueFactory<Player, String>("lastName")
+        );
         goals.setCellValueFactory(
                 new PropertyValueFactory<Player, Integer>("goals")
         );
-        goals.setCellFactory(new Callback<TableColumn< Player, Integer>, TableCell<Player, Integer>>() {
+        goals.setCellFactory(new Callback<TableColumn<Player, Integer>, TableCell<Player, Integer>>() {
             @Override
-            public TableCell< Player, Integer> call(TableColumn< Player, Integer> param) {
+            public TableCell<Player, Integer> call(TableColumn<Player, Integer> param) {
                 return new GoalsCell();
             }
         });
@@ -61,7 +62,7 @@ public class MainApp extends Application {
         firstName.setOnEditCommit(new EventHandler<CellEditEvent<Player, String>>() {
             @Override
             public void handle(CellEditEvent<Player, String> t) {
-                ((Player) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFirstName(t.getNewValue());
+                t.getTableView().getItems().get(t.getTablePosition().getRow()).setFirstName(t.getNewValue());
             }
         });
         StackPane root = new StackPane(tableView);
