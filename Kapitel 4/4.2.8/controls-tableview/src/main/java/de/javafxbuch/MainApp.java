@@ -24,10 +24,11 @@ public class MainApp extends Application {
         launch(args);
     }
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void start(Stage primaryStage) {
-        TableView tableView = new TableView();
-        ObservableList< Player> players = FXCollections
+        TableView<Player> tableView = new TableView<>();
+        ObservableList<Player> players = FXCollections
                 .observableArrayList(
                         new Player("Manuel", "Neuer", 0),
                         new Player("Philipp", "Lahm", 0),
@@ -36,9 +37,9 @@ public class MainApp extends Application {
                         new Player("Benedikt", "Höwedes", 0)
                 );
         tableView.setItems(players);
-        TableColumn firstName = new TableColumn("Vorname");
-        TableColumn lastName = new TableColumn("Nachname");
-        TableColumn goals = new TableColumn("Tore");
+        TableColumn<Player, String> firstName = new TableColumn<>("Vorname");
+        TableColumn<Player, String> lastName = new TableColumn<>("Nachname");
+        TableColumn<Player, Integer> goals = new TableColumn<>("Tore");
         tableView.getColumns().addAll(firstName, lastName, goals);
         firstName.setCellValueFactory(
                 new PropertyValueFactory<Player, String>("firstName")
@@ -46,7 +47,7 @@ public class MainApp extends Application {
         lastName.setCellValueFactory(
                 new PropertyValueFactory<Player, String>("lastName"));
         goals.setCellValueFactory(
-                new PropertyValueFactory< Player, Integer>("goals")
+                new PropertyValueFactory<Player, Integer>("goals")
         );
         goals.setCellFactory(new Callback<TableColumn< Player, Integer>, TableCell<Player, Integer>>() {
             @Override
