@@ -32,6 +32,8 @@ public class MainApp extends Application {
         EventHandler<MouseEvent> clickHandler;
         final CardStackLayout cardStackLayout = new CardStackLayout();
         final CardStackLayout cardStackLayout2 = new CardStackLayout();
+        cardStackLayout.setMinHeight(200);
+        cardStackLayout2.setMinHeight(200);
         clickHandler = new EventHandler<MouseEvent>() {
 
             @Override
