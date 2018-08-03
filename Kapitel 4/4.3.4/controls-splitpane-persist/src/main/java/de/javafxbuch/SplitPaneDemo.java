@@ -22,17 +22,17 @@ public class SplitPaneDemo extends Application {
         Preferences prefs = Preferences.userNodeForPackage(SplitPaneDemo.class);
         splitPane = new SplitPane();
 
-        if (prefs.getDouble("divider0", -1) != -1) {
-            for (int i = 0; i < splitPane.getDividerPositions().length; i++) {
-                splitPane.setDividerPosition(i,
-                        prefs.getDouble("divider" + i, 0));
-            }
-        }
         for (int i = 0; i < 5; i++) {
             StackPane stackPane = new StackPane(new Label("Fenster " + i));
             stackPane.setMinWidth(40);
             stackPane.setMaxWidth(120);
             splitPane.getItems().add(stackPane);
+        }
+        if (prefs.getDouble("divider0", -1) != -1) {
+            for (int i = 0; i < splitPane.getDividerPositions().length; i++) {
+                splitPane.setDividerPosition(i,
+                        prefs.getDouble("divider" + i, 0));
+            }
         }
 //        SplitPane vSplitPane = new SplitPane();
 //        vSplitPane.setOrientation(Orientation.VERTICAL);
