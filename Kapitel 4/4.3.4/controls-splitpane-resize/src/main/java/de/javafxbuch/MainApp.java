@@ -16,11 +16,11 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         SplitPane splitPane = new SplitPane();
-        final StackPane stackPane = new StackPane(new Label("Hilfsfenster1"));
+        StackPane stackPane = new StackPane(new Label("Hilfsfenster1"));
         SplitPane.setResizableWithParent(stackPane, false);
         splitPane.getItems().add(stackPane);
         splitPane.getItems().add(new StackPane(new Label("Dokumentenfenster")));
-        final StackPane stackPane1 = new StackPane(new Label("Hilfsfenster2"));
+        StackPane stackPane1 = new StackPane(new Label("Hilfsfenster2"));
         SplitPane.setResizableWithParent(stackPane1, false);
         splitPane.getItems().add(stackPane1);
         StackPane pane = new StackPane(splitPane);
