@@ -35,7 +35,7 @@ public class MainApp extends Application {
         Button button = new Button("\uf015");
         button.setFont(Font.font("FontAwesome", 40));
         BorderPane root = new BorderPane();
-        final HomeTimeline homeTimeline = new HomeTimeline();
+        HomeTimeline homeTimeline = new HomeTimeline();
         homeTimeline.refresh();
         root.setCenter(homeTimeline);
         ToolBar toolBar = new ToolBar();
