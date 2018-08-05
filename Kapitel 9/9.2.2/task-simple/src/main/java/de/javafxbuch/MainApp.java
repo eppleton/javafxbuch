@@ -22,7 +22,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) {
         Button btn = new Button();
         btn.setText("Run");
-        final Task<Integer> task = new Task<Integer>() {
+        Task<Integer> task = new Task<Integer>() {
             @Override
             protected Integer call() throws Exception {
                 int iterationen;
