@@ -6,7 +6,7 @@ GridPane{
     -fx-background-color: white;
     -fx-alignment: CENTER_RIGHT;
     -fx-font-size: 50;
-    -fx-padding: 4 4 4 4;
+    -fx-padding: 4 4 0 4;
 }
 
 .button{
