@@ -1,13 +1,10 @@
 package de.javafxbuch;
 
 import javafx.application.Application;
-import javafx.beans.binding.Bindings;
-import javafx.concurrent.ScheduledService;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
