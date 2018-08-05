@@ -1,5 +1,4 @@
-CustomRegion:active{
+.my:active{
     -fx-background-color: red;
     -fx-opacity: 1;
 }
-
