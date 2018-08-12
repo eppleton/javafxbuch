@@ -131,7 +131,7 @@ public class MainApp extends Application {
         text2.setFont(new Font(8));
         text3.setStrikethrough(true);
 
-//        root.getChildren().add(rectangle);
+        root.getChildren().add(rectangle);
         root.getChildren().add(circle);
         root.getChildren().add(circle2);
         root.getChildren().add(union);
