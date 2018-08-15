@@ -5,7 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
@@ -27,7 +26,7 @@ public class MainApp extends Application {
         for (int i = 0; i < images.length; i++) {
             iconView.getChildren().add(new ImageView(images[i]));
         }
-        primaryStage.setScene(new Scene(new StackPane(iconView), 300, 200));
+        primaryStage.setScene(new Scene(iconView, 300, 200));
 
         primaryStage.show();
     }

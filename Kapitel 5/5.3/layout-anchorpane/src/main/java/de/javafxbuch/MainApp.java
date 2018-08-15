@@ -5,7 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
@@ -26,7 +25,7 @@ public class MainApp extends Application {
         anchorPane.getChildren().add(buttons);
         AnchorPane.setRightAnchor(buttons, 10.0);
         AnchorPane.setBottomAnchor(buttons, 20.0);
-        primaryStage.setScene(new Scene(new StackPane(anchorPane), 300, 200));
+        primaryStage.setScene(new Scene(anchorPane, 300, 200));
 
         primaryStage.show();
     }
