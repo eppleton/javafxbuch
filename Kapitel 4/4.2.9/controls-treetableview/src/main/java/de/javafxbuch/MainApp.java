@@ -23,8 +23,7 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) {
         TreeTableView<Player> treeTableView = new TreeTableView<>();
         TreeItem<Player> root = new TreeItem<>(new Player("Joachim", "Löw", 0));
-        root.getChildren().add(new TreeItem<Player>(
-                new Player("Manuel", "Neuer", 0)));
+		root.getChildren().add(new TreeItem<Player>(new Player("Manuel", "Neuer", 0)));
         root.getChildren().add(new TreeItem<Player>(new Player("Philipp", "Lahm", 0)));
         treeTableView.setRoot(root);
         TreeTableColumn<Player, String> firstNameColumn = new TreeTableColumn<Player, String>("Vorname");

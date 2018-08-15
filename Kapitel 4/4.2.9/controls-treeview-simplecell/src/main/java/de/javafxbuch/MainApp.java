@@ -21,6 +21,7 @@ public class MainApp extends Application {
         TreeView treeView = new TreeView();
         TreeItem<Color> root = new TreeItem<>(Color.RED);
         treeView.setRoot(root);
+        treeView.setEditable(true);
         treeView.setCellFactory(TextFieldTreeCell.forTreeView(new StringConverter<Color>() {
             @Override
             public String toString(Color object) {
@@ -33,19 +34,17 @@ public class MainApp extends Application {
                 try {
                     web = Color.web(string);
                 } catch (Exception e) {
-// im Fehlerfall geben wir Schwarz als Farbe zurueck 
+                    // im Fehlerfall geben wir Schwarz als Farbe zurueck 
                 }
                 return web;
             }
         }
         ));
-        root.getChildren()
-                .add(new TreeItem<Color>(Color.BLUE));
+		root.getChildren().add(new TreeItem<Color>(Color.BLUE));
         StackPane pane = new StackPane(treeView);
         Scene scene = new Scene(pane, 300, 250);
 
-        primaryStage.setTitle(
-                "TableView Demo");
+		primaryStage.setTitle("TableView Demo");
         primaryStage.setScene(scene);
 
         primaryStage.show();
