@@ -12,16 +12,16 @@ public class MainApp extends Application {
         launch(args);
     }
 
-    @Override
-    public void start(Stage primaryStage) {
-       ColorPicker colorPicker = new ColorPicker(); colorPicker.setOnAction( e -> System.out.println( "Farbe "
-        +colorPicker.getValue()));
-        StackPane pane = new StackPane(colorPicker);
-        Scene scene = new Scene(pane, 300, 250);
+	@Override
+	public void start(Stage primaryStage) {
+		ColorPicker colorPicker = new ColorPicker();
+		colorPicker.setOnAction(e -> System.out.println("Farbe " + colorPicker.getValue()));
+		StackPane pane = new StackPane(colorPicker);
+		Scene scene = new Scene(pane, 300, 250);
 
-        primaryStage.setScene(scene);
+		primaryStage.setScene(scene);
 
-        primaryStage.show();
+		primaryStage.show();
     }
 
 }

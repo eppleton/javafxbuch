@@ -22,6 +22,7 @@ public class MainApp extends Application {
         cb.getItems().add(new Person("Jérôme", "Boateng", 25));
         cb.getItems().add(new Person("Benedikt", "Höwedes", 26));
         //...
+
         cb.setConverter(new StringConverter<Person>() {
             @Override
             public String toString(Person p) {
@@ -31,9 +32,7 @@ public class MainApp extends Application {
             @Override
             public Person fromString(String string) {
                 // muss für diesen Anwendungsfall nicht implementiert sein 
-                throw new UnsupportedOperationException("Not"
-                        + "supported yet."
-                );
+				throw new UnsupportedOperationException("Not supported yet.");
             }
         });
 
