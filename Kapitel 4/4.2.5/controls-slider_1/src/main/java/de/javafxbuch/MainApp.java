@@ -40,7 +40,7 @@ public class MainApp extends Application {
         slider.setLabelFormatter(new StringConverter<Double>() {
             @Override
             public String toString(Double value) {
-                return Double.toString(value).format("%.2f", value);
+                return String.format("%.2f", value);
             }
 
             @Override
