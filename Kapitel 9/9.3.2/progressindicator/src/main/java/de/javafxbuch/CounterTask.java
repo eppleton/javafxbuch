@@ -18,7 +18,7 @@ public class CounterTask extends Task<Integer> {
             Thread.sleep(10);
             updateProgress(i, max);
         }
-
+		updateProgress(max, max);
 
         updateMessage("READY");
         return max;
