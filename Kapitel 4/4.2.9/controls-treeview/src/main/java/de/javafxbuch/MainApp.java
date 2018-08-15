@@ -49,11 +49,10 @@ public class MainApp extends Application {
                 .add(new TreeItem<Color>(Color.BLUE));
         StackPane pane = new StackPane(treeView);
         Scene scene = new Scene(pane, 300, 250);
+        scene.getStylesheets().add(getClass().getResource("tree.css").toExternalForm());
 
-        primaryStage.setTitle(
-                "TableView Demo");
+		primaryStage.setTitle("TableView Demo");
         primaryStage.setScene(scene);
-
         primaryStage.show();
     }
 
