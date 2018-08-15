@@ -1,0 +1,7 @@
+.tree-cell > .tree-disclosure-node > .arrow {
+    -fx-rotate: 0;
+}
+
+.tree-cell:expanded > .tree-disclosure-node > .arrow {
+    -fx-rotate: 90;
+}

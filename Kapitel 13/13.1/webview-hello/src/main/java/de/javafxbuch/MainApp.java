@@ -1,5 +1,7 @@
 package de.javafxbuch;
 
+import java.util.ArrayList;
+
 import javafx.application.Application;
 import javafx.collections.ListChangeListener;
 import javafx.concurrent.Worker.State;
@@ -42,13 +44,12 @@ public class MainApp extends Application {
         MenuItem home = new MenuItem("Home");
         navigateMenu.getItems().addAll(home);
         home.setOnAction(e -> engine.load("http://eppleton.de"));
-        menuBar.getMenus().add(navigateMenu);
         Menu historyMenu = new Menu("History");
         engine.getHistory().getEntries().addListener(
                 (ListChangeListener.Change<? extends Entry> c) -> {
                     c.next();
                     for (Entry e : c.getAddedSubList()) {
-                        for (MenuItem i : historyMenu.getItems()) {
+                        for (MenuItem i : new ArrayList<>(historyMenu.getItems())) {
                             if (i.getId().equals(e.getUrl())) {
                                 historyMenu.getItems().remove(i);
                             }
