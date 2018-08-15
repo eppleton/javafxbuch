@@ -21,15 +21,14 @@ public class MainApp extends Application {
         pagination.setPageFactory(new Callback<Integer, Node>() {
             @Override
             public Node call(Integer i) {
-                return new StackPane(new ImageView("http://www.free-nature-animal-butterfly-wallpaper.com/wallpapers/animal"
-                        + (i + 1) + ".jpg"));
+                return new StackPane(new ImageView("http://assets.pokemon.com/assets/cms2/img/pokedex/full/"
+                		+ String.format("%03d", i+1)
+                        + ".png"));
             }
         });
         StackPane pane = new StackPane(pagination);
-        Scene scene = new Scene(pane, 300, 250);
-
+        Scene scene = new Scene(pane, 550, 550);
         primaryStage.setScene(scene);
-
         primaryStage.show();
     }
 
