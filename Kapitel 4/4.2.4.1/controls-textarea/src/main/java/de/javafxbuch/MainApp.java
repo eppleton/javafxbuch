@@ -15,7 +15,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        final TextArea textArea = new TextArea();
+        TextArea textArea = new TextArea();
         textArea.setPrefRowCount(10);
         textArea.setPrefColumnCount(20);
         textArea.setWrapText(true);

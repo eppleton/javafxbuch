@@ -31,7 +31,7 @@ public class MainApp extends Application {
         root.setTop(menuBar);
         ImageView imageView = new ImageView(new Image(getClass().getResource("javaduke_html5.png").toExternalForm()));
         root.setCenter(imageView);
-        final ContextMenu contextMenu = new ContextMenu();
+        ContextMenu contextMenu = new ContextMenu();
         MenuItem halloMenuItem = new MenuItem("Sag 'Hallo'");
         halloMenuItem.setOnAction(
                 e -> System.out.println("Duke: 'Hallo!'"));

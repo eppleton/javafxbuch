@@ -20,7 +20,7 @@ public class StatusView extends HBox {
     private final VBox textBox;
     private final Label screenName;
     private final Label statusText;
-    private VBox toolbar;
+    private final VBox toolbar;
 
     public StatusView() {
         setPadding(new Insets(4));

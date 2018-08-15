@@ -30,8 +30,8 @@ public class MainApp extends Application {
         String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "ace", "jack", "king", "queen"};
         String[] colors = {"clubs", "diamonds", "hearts", "spades"};
         EventHandler<MouseEvent> clickHandler;
-        final CardStackLayout cardStackLayout = new CardStackLayout();
-        final CardStackLayout cardStackLayout2 = new CardStackLayout();
+        CardStackLayout cardStackLayout = new CardStackLayout();
+        CardStackLayout cardStackLayout2 = new CardStackLayout();
         clickHandler = new EventHandler<MouseEvent>() {
 
             @Override
