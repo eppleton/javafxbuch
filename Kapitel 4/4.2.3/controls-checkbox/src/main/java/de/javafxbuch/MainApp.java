@@ -17,6 +17,7 @@ public class MainApp extends Application {
 
         CheckBox checkBox = new CheckBox("I'm undecided");
         checkBox.setAllowIndeterminate(true);
+        checkBox.setIndeterminate(false);
         checkBox.setOnAction(e -> {
             if (checkBox.isIndeterminate()) {
                 checkBox.setText("I'm undecided");
