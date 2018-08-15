@@ -1,10 +1,13 @@
 package de.javafxbuch.tweetalot;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.prefs.Preferences;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -21,9 +24,6 @@ import javafx.scene.text.Font;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
@@ -41,8 +41,7 @@ public class MainApp extends Application {
         Twitter twitter = TwitterFactory.getSingleton();
         Preferences prefs = Preferences.userNodeForPackage(MainApp.class);
         RequestToken requestToken = twitter.getOAuthRequestToken();
-        Font.loadFont(getClass().getResource("fontawesome-webfont.ttf").
-                toExternalForm(), 12);
+		Font.loadFont(getClass().getResource("fontawesome-webfont.ttf").toExternalForm(), 12);
         root = new BorderPane();
         StackPane stackPane = new StackPane(root);
         final WebView webView = new WebView();
