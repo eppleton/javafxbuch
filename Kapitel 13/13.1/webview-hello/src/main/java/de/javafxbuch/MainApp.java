@@ -1,5 +1,7 @@
 package de.javafxbuch;
 
+import java.util.ArrayList;
+
 import javafx.application.Application;
 import javafx.collections.ListChangeListener;
 import javafx.concurrent.Worker.State;
@@ -47,7 +49,7 @@ public class MainApp extends Application {
                 (ListChangeListener.Change<? extends Entry> c) -> {
                     c.next();
                     for (Entry e : c.getAddedSubList()) {
-                        for (MenuItem i : historyMenu.getItems()) {
+                        for (MenuItem i : new ArrayList<>(historyMenu.getItems())) {
                             if (i.getId().equals(e.getUrl())) {
                                 historyMenu.getItems().remove(i);
                             }
