@@ -24,10 +24,11 @@ public class MainApp extends Application {
         launch(args);
     }
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void start(Stage primaryStage) {
-        TableView tableView = new TableView();
-        ObservableList< Player> players = FXCollections
+        TableView<Player> tableView = new TableView<>();
+        ObservableList<Player> players = FXCollections
                 .observableArrayList(
                         new Player("Manuel", "Neuer", 0),
                         new Player("Philipp", "Lahm", 0),
@@ -36,21 +37,22 @@ public class MainApp extends Application {
                         new Player("Benedikt", "Höwedes", 0)
                 );
         tableView.setItems(players);
-        TableColumn firstName = new TableColumn("Vorname");
-        TableColumn lastName = new TableColumn("Nachname");
-        TableColumn goals = new TableColumn("Tore");
+        TableColumn<Player, String> firstName = new TableColumn<>("Vorname");
+        TableColumn<Player, String> lastName = new TableColumn<>("Nachname");
+        TableColumn<Player, Integer> goals = new TableColumn<>("Tore");
         tableView.getColumns().addAll(firstName, lastName, goals);
         firstName.setCellValueFactory(
                 new PropertyValueFactory<Player, String>("firstName")
         );
         lastName.setCellValueFactory(
-                new PropertyValueFactory<Player, String>("lastName"));
-        goals.setCellValueFactory(
-                new PropertyValueFactory< Player, Integer>("goals")
+                new PropertyValueFactory<Player, String>("lastName")
         );
-        goals.setCellFactory(new Callback<TableColumn< Player, Integer>, TableCell<Player, Integer>>() {
+        goals.setCellValueFactory(
+                new PropertyValueFactory<Player, Integer>("goals")
+        );
+        goals.setCellFactory(new Callback<TableColumn<Player, Integer>, TableCell<Player, Integer>>() {
             @Override
-            public TableCell< Player, Integer> call(TableColumn< Player, Integer> param) {
+            public TableCell<Player, Integer> call(TableColumn<Player, Integer> param) {
                 return new GoalsCell();
             }
         });
@@ -60,7 +62,7 @@ public class MainApp extends Application {
         firstName.setOnEditCommit(new EventHandler<CellEditEvent<Player, String>>() {
             @Override
             public void handle(CellEditEvent<Player, String> t) {
-                ((Player) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFirstName(t.getNewValue());
+                t.getTableView().getItems().get(t.getTablePosition().getRow()).setFirstName(t.getNewValue());
             }
         });
         StackPane root = new StackPane(tableView);
