@@ -42,7 +42,6 @@ public class MainApp extends Application {
         MenuItem home = new MenuItem("Home");
         navigateMenu.getItems().addAll(home);
         home.setOnAction(e -> engine.load("http://eppleton.de"));
-        menuBar.getMenus().add(navigateMenu);
         Menu historyMenu = new Menu("History");
         engine.getHistory().getEntries().addListener(
                 (ListChangeListener.Change<? extends Entry> c) -> {
