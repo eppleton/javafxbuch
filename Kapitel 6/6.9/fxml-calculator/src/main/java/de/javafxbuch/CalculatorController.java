@@ -68,7 +68,7 @@ public class CalculatorController implements Initializable {
             try {
                 Number parse = NumberFormat.getInstance(Locale.US).parse(displayedtext.get());
                 double res = parse.doubleValue() * -1;
-                displayedtext.set("" + NumberFormat.getInstance(Locale.US).format(res));
+                displayedtext.set(NumberFormat.getInstance(Locale.US).format(res));
             } catch (ParseException ex) {
                 Logger.getLogger(CalculatorController.class.getName()).log(Level.SEVERE, null, ex);
             }
